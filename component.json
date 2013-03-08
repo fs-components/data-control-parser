@@ -1,0 +1,13 @@
+{
+  "name": "data-control-parser",
+  "repo": "fs-components/data-control-parser",
+  "description": "Component equivalent of frontier controls.js file. Parses data-control and data-config and returns cfg obj.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
