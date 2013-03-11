@@ -4,7 +4,9 @@
   "description": "Component equivalent of frontier controls.js file. Parses data-control and data-config and returns cfg obj.",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "fs-components/qwery": "*"
+    },
   "development": {},
   "license": "MIT",
   "scripts": [

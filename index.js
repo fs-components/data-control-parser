@@ -4,8 +4,18 @@
  * - Change data-control to data-control-init upon instantiation
  * - parse the data-config attribute (which contains a JSON cfg obj )
  * - return the parsed config obj
+ * -
  * - DOES NOT fetch all the controls from the DOM like the frontier version does...
+ * - If string is passed in, fetch the string.
+ *
 */
+
+
+/**
+ * Module Deps
+ */
+
+var qwery = require('qwery'); 
 
 /*
  * Component Description
@@ -15,6 +25,11 @@
 
 module.exports = function(el){
   
+  //if query is passed in, fetch the node
+  if (typeof el === "string") {
+    el = qwery(el)[0];
+  }
+
   //extract the data-control
   var control = el.getAttribute("data-control");
   var dataConfig = el.getAttribute('data-config');
