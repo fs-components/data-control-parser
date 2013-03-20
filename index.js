@@ -15,7 +15,8 @@
  * Module Deps
  */
 
-var qwery = require('qwery'); 
+require('query-qwery'); //old browser support for query
+var query = require('query'); 
 
 /*
  * Component Description
@@ -27,7 +28,7 @@ module.exports = function(el){
   
   //if query is passed in, fetch the node
   if (typeof el === "string") {
-    el = qwery(el)[0];
+    el = query(el);
   }
 
   //extract the data-control
