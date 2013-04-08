@@ -61,7 +61,8 @@ module.exports = function(el){
 
   //return config obj
   return config;
-}
+};
+
 
 
 
