@@ -1,0 +1,23 @@
+{
+  "name": "data-control-parser",
+  "version": "0.0.0",
+  "description": "A component for parsing controls",
+  "main": "index.js",
+  "devDependencies": {
+    "karma": "*"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fs-components/data-control-parser.git"
+  },
+  "author": "Jamis Charles",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "gitHead": "7fa450a280743f669cafcbd49fca9d0438a52a79"
+}

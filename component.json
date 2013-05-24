@@ -8,7 +8,9 @@
     "component/query": "*",
     "jamischarles/query-qwery": "*"
     },
-  "development": {},
+  "development": {
+    "chaijs/chai": "*"
+  },
   "license": "MIT",
   "scripts": [
     "index.js"

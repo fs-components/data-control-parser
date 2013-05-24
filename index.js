@@ -22,9 +22,13 @@ var query = require('query');
  * Component Description
  * Component equivalent of frontier controls.js file. Parses data-control and data-config and returns cfg obj.
  *
+ * el       : node or selector
+ * dataAttr : (default: data-control) the "data-name" attribute where the name
+ *            of the control is stored. Currently this will only be "data-control" or "data-comp"
  */ 
 
-module.exports = function(el){
+module.exports = function(el, dataAttr){
+  dataAttr = dataAttr || 'data-control';
   
   //if query is passed in, fetch the node
   if (typeof el === "string") {
@@ -32,7 +36,7 @@ module.exports = function(el){
   }
 
   //extract the data-control
-  var control = el.getAttribute("data-control");
+  var control = el.getAttribute(dataAttr);
   var dataConfig = el.getAttribute('data-config');
   var config = {};
 
@@ -52,8 +56,8 @@ module.exports = function(el){
   config.control = control;
 
   // convert to done
-  el.removeAttribute("data-control");
-  el.setAttribute("data-control-init", control); 
+  el.removeAttribute(dataAttr);
+  el.setAttribute(dataAttr + "-init", control); 
 
   //add control class name (like the frontier version does)
   var controlClass = control.charAt(0).toLowerCase() + control.substr(1);
