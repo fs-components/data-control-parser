@@ -9,7 +9,7 @@ clean:
 	rm -fr build components template.js
 
 node_modules: package.json
-	npm install --dev
+	npm install
 
 test: node_modules build
 	./node_modules/.bin/karma start test/karma.conf.js
