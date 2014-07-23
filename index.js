@@ -31,6 +31,8 @@ module.exports = function(el){
     el = query(el);
   }
 
+  if (typeof el !== 'object') return {};
+
   //extract the data-control
   var control = el.getAttribute("data-control");
   var dataConfig = el.getAttribute('data-config');
